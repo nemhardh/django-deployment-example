@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Checking to see the website works</h1>
+
+    <div>
+        {% if user_records %}
+        <table>
+            <thead>Usernaem
+                <th>first name </th>
+                <th> last name</th>
+                <th> useremail</th>
+             </thead>
+             {% for x in user_records%}
+             <tr>
+                 <td>{{ x.first_Name}}</td>
+                 <td>{{ x.last_Name}}</td>
+                 <td>{{ x.user_email}}</td>
+             </tr>
+             {% endfor %}
+        </table>
+        {%else%}
+        {% endif %}
+
+    </div>
+    
+</body>
+</html>
